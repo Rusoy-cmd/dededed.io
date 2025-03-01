@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Добро пожаловать!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: calc(var(--tg-viewport-height, 90vh));
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        .icon {
+            font-size: 200px; 
+            margin-bottom: 110px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+        }
+
+        h1{
+            top: 52%;
+            font-size: 110%;
+            position: absolute;
+            text-shadow: 2px 2px 5px rgba(170, 168, 168, 0.3);
+            color: #333;
+        }
+        h2 {
+            top: 55%;
+            font-size: 110%;
+            position: absolute;
+            text-shadow: 2px 2px 5px rgba(170, 168, 168, 0.3);
+            color: #333;
+        }
+        h3 {
+            top: 65%;
+            font-size: 90%;
+            position: absolute;
+            text-shadow: 2px 2px 5px rgba(170, 168, 168, 0.3);
+            color: #666;
+        }
+        h4{
+            top: 67%;
+            font-size: 90%;
+            position: absolute;
+            text-shadow: 2px 2px 5px rgba(170, 168, 168, 0.3);
+            color: #666;
+        }
+        button {
+            position: absolute;
+            bottom: 5%;
+            padding: 10px 70px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            color: #fff;
+            background-color: #ff0000;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        button:hover {
+            background-color: #3A3B3C;
+        }
+    </style>
+</head>
+<body>
+    <i class='bx bx-paper-plane icon'></i>
+    <h1>Хотите, чтобы мы</h1>
+    <h2>присылали вам напоминания?</h2>
+    <h3>Пользователи, у которых есть напоминания,</h3>
+    <h4>строят свою жизнь в разы эффективнее.</h4>
+    <button>ХОРОШО!</button>
+
+    <button id="startButton">ХОРОШО!</button>
+
+<script>
+    document.getElementById('startButton').addEventListener('click', () => {
+        window.location.href = "dodo.html"; // Укажите URL, на который нужно перенаправить
+    });
+</script>
+
+    <script>
+        window.Telegram.WebApp.ready();
+        window.Telegram.WebApp.expand();
+    </script>
+
+</body>
+
+</html>
